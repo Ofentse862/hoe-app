@@ -1,16 +1,16 @@
 {
   "name": "HOE — Heaven On Earth",
   "short_name": "HOE",
-  "description": "A private space for life and money.",
+  "description": "A quieter place for your day.",
+  "id": "./",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#090909",
-  "theme_color": "#090909",
-  "orientation": "portrait",
-  "lang": "en-ZA",
+  "display_override": ["standalone"],
+  "background_color": "#080809",
+  "theme_color": "#080809",
   "icons": [
-    {"src":"./icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
-    {"src":"./icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"}
+    {"src":"./icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"./icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
   ]
 }

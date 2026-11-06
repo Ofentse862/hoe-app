@@ -1,16 +1,21 @@
-# HOE releases
+# HOE changes
 
-## v0.4 — Workflow and mobile layout (6 November 2026)
+## 1.0 — Core redesign
 
-- Rebuilt the mobile layout as a fixed-height, single-scroll-region application; bottom navigation stays attached to the screen and content does not shift horizontally.
-- Increased form text to 16px to avoid Safari auto-zoom on focus while preserving user-controlled accessibility zoom.
-- Reworked Today around one next action, a simple low-capacity toggle, up to three visible tasks, quick capture, and a calendar entry point.
-- Added a real, editable local calendar with Day, Week, and Month views. Fixed appointments and movable time blocks are distinguished. Tasks with deadlines are shown separately. New blocks and tasks default to the selected calendar day.
-- Added the requested seven-row, 24-hour sleep grid. Main sleep, naps, estimates and midnight-crossing sleep are plotted by time of day; previous/next weeks and individual day summaries are available.
-- Simplified capture: **Save to inbox** is the default; task and note remain optional shortcuts.
-- Preserved the v0.3 encrypted IndexedDB schema, passphrase, tasks, notes, money records, attachments, and migration.
-- Updated the service-worker cache key to ensure installed versions can retrieve new assets.
+- Replaced the prior complex Life navigation with **Today / Matrix / Radar / Calendar / Notes**.
+- Removed Project Spaces, Arrangements, Low Capacity, More, and a separate Journal from the visible interface. Existing encrypted data in older arrays is not erased.
+- Rebuilt Today around the current event/time block, a direct record-this-time action, next events, the radar and urgent Matrix tasks.
+- Rebuilt the full Eisenhower Matrix around user-editable categories, with task detail, completion, prioritisation and archive/restore.
+- Introduced the central daily Radar with customisable essentials and structured records; daily reflection now opens plain Notes.
+- Kept the full seven-day 24-hour sleep grid with midnight-spanning intervals.
+- Rebuilt Notes as a grid with a single blank editor, auto-save, pin and compressed encrypted image attachments.
+- Made Calendar event-first, with repeatable events and Month/Week/Day views.
+- Kept Time Lock for in-app focus with pause/resume, return note and recorded-session history.
+- Retained a separate, simplified Money mode for manually entered finances.
+- Kept the v0.3/v0.4 encrypted vault identity and backup format, plus app locking, passphrase changes and manual encrypted backup/restore.
+- Reworked iOS responsive layout using dynamic viewport units, safe-area insets, a single contained vertical scroll region and 16px+ input text. No pinch-zoom disabling; accessible zoom remains possible.
+- Moved to a versioned offline-shell service worker and network-first updates.
 
-### Not yet implemented
+### Explicit limitations
 
-Cloud backups, actual Google Drive OAuth, two-way Google Calendar synchronization, Gmail integration, background push notifications, and biometric unlock. The calendar in this build shows HOE records only, not external calendar events.
+No Google Drive/Calendar/Gmail sync, system-wide app blocking, Face ID or push-server notifications. The prior v0.4 source should be preserved on a rollback branch before deployment. Automated tests cover source logic, not real-device iOS interaction.
