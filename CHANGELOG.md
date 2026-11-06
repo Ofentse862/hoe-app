@@ -7,6 +7,7 @@
 - Rebuilt Today around the current event/time block, a direct record-this-time action, next events, the radar and urgent Matrix tasks.
 - Rebuilt the full Eisenhower Matrix around user-editable categories, with task detail, completion, prioritisation and archive/restore.
 - Introduced the central daily Radar with customisable essentials and structured records; daily reflection now opens plain Notes.
+- Added a lightweight daily-record correction view for undoing logged amounts.
 - Kept the full seven-day 24-hour sleep grid with midnight-spanning intervals.
 - Rebuilt Notes as a grid with a single blank editor, auto-save, pin and compressed encrypted image attachments.
 - Made Calendar event-first, with repeatable events and Month/Week/Day views.

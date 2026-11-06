@@ -27,7 +27,7 @@ assert.equal(a.sleepDuration('2026-11-06'),420);assert.equal(a.sleepDuration('20
 assert.equal(a.radarComplete(a.getData().radarItems.find(x=>x.id==='weight'),'2026-11-06'),true);
 const screens=[['today','todayView'],['matrix','matrixView'],['radar','radarView'],['calendar','calendarView'],['notes','notesView']];
 for(let [name,fn] of screens){const out=a[fn]();assert.ok(out.length>100,name+' empty');assert.ok(!out.includes('undefined</'),name+' contains undefined');a.ui.page=name;a.ui.route='';a.ui.mode='life';a.render();assert.ok(nodes['#view'].innerHTML.length>100,name+' render failed');}
-for(let route of ['settings','categories','radar-settings','inbox','quadrant','task','event','block','note','sleep','weight','face','focus','sessions','session','transaction','commitment','account','debt','backup','archive']){
+for(let route of ['settings','categories','radar-settings','inbox','quadrant','task','event','block','note','sleep','weight','face','focus','sessions','session','transaction','commitment','account','debt','backup','archive','daily-records']){
  a.ui.route=route;a.ui.detail=route==='task'?'task1':route==='event'?'event1':route==='block'?'block1':route==='note'?'note1':route==='transaction'?'t1':route==='account'?'a':route==='quadrant'?'1':'';const out=a.routeView();assert.ok(out.length>15,route+' failed to render');
 }
 a.ui.route='';a.ui.mode='money';for(let page of ['overview','activity','commitments','accounts']){a.ui.moneyPage=page;a.render();assert.ok(nodes['#view'].innerHTML.length>100,page+' failed')}

@@ -8,7 +8,7 @@
 
 - **Today:** local time, current event or time block, "What are you doing?" capture when nothing is active, next event, daily radar, urgent tasks and the quick-capture inbox.
 - **Matrix:** a full four-quadrant Eisenhower Matrix; categories; due dates, details, task completion, archiving and a first next action. Categories can be created and renamed in Settings. No project hierarchy.
-- **Radar:** a customisable daily checklist, with structured entry points for sleep, weight, a photograph, water, reading, exercise and a short reflection. Sleep, weight and photos can complete their items from saved records. Reflections are stored in **Notes**, not a separate journal.
+- **Radar:** a customisable daily checklist, with structured entry points for sleep, weight, a photograph, water, reading, exercise and a short reflection. Daily logs can be reviewed and undone from Radar. Sleep, weight and photos can complete their items from saved records. Reflections are stored in **Notes**, not a separate journal.
 - **Sleep:** seven days on a 00–24 hour horizontal timeline, with overnight sleep split at midnight, and separate main sleep and nap bars.
 - **Calendar:** Month, Week and Day event views; create/edit recurring events, meetings and appointments. Time blocks are separately recorded and shown on Today.
 - **Notes:** searchable two-column note grid; one-tap empty note editor; auto-saving title/body; optional image attachment; pin and archive. No mandatory metadata.
