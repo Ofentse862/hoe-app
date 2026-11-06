@@ -1,15 +1,16 @@
-# Changelog
+# HOE releases
 
-## v0.3 — 5 November 2026
+## v0.4 — Workflow and mobile layout (6 November 2026)
 
-- Rebuilt the interface against ten supplied monochrome iOS design boards. Removed decorative dashboard styling and retained the original H. home-screen icon.
-- Introduced a user-passphrase-encrypted IndexedDB vault (PBKDF2-HMAC-SHA-256 and AES-256-GCM), encrypted backup/restore, configurable privacy auto-lock and app-switcher privacy blur.
-- Migrates local v0.2 records after encryption succeeds. Retains an encrypted snapshot of the original data for recovery. Preserves existing GitHub source on `legacy-v0.2` branch.
-- Rebuilt Life and Money navigation: daily overview, priority matrix, tasks, time blocks, focus sessions, notes and journals, project spaces, opportunity and exam desks, life shelf, sleep, weight, photos, finances, commitments, debts and shopping.
-- Added internal-account transfers without inflating income or spending, distinctions between expected and recorded money, manually entered receipts, session return notes and snoozes that preserve deadlines.
-- Added archive/restore, readable-note/task export with explicit privacy warnings, and plaintext CSV formula-injection mitigation.
-- Strictly local dependencies with restrictive Content Security Policy. No cloud sync, Face ID, bank connection or background notification delivery yet.
+- Rebuilt the mobile layout as a fixed-height, single-scroll-region application; bottom navigation stays attached to the screen and content does not shift horizontally.
+- Increased form text to 16px to avoid Safari auto-zoom on focus while preserving user-controlled accessibility zoom.
+- Reworked Today around one next action, a simple low-capacity toggle, up to three visible tasks, quick capture, and a calendar entry point.
+- Added a real, editable local calendar with Day, Week, and Month views. Fixed appointments and movable time blocks are distinguished. Tasks with deadlines are shown separately. New blocks and tasks default to the selected calendar day.
+- Added the requested seven-row, 24-hour sleep grid. Main sleep, naps, estimates and midnight-crossing sleep are plotted by time of day; previous/next weeks and individual day summaries are available.
+- Simplified capture: **Save to inbox** is the default; task and note remain optional shortcuts.
+- Preserved the v0.3 encrypted IndexedDB schema, passphrase, tasks, notes, money records, attachments, and migration.
+- Updated the service-worker cache key to ensure installed versions can retrieve new assets.
 
-## v0.2 — previous release
+### Not yet implemented
 
-- Initial Life/Money progressive web application, stored records in plaintext browser localStorage. Kept on a rollback branch for compatibility; users should migrate to the encrypted version before deleting their former installation.
+Cloud backups, actual Google Drive OAuth, two-way Google Calendar synchronization, Gmail integration, background push notifications, and biometric unlock. The calendar in this build shows HOE records only, not external calendar events.
